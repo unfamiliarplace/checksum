@@ -64,6 +64,10 @@ def check_sum(s: str, check: int) -> bool:
 def check_sums(s1: str, s2: str) -> bool:
     return check_sum(s1, make_sum(s2))
 
+'''
+PROGRAMS
+'''
+
 def test():
     for word in 'this is a test sith si a sett'.split():
         print(f'{word:<5} {make_sum(word)}')
@@ -73,6 +77,10 @@ def test():
     print(test1, make_sum(test1))
     print(test2, make_sum(test2))
 
+def summarize():
+    s = input('Enter a string: ').strip()
+    print(make_sum(s))
+
 def compare():
     check = int(input('Enter a checksum: ').strip())
     s = input('Enter a string: ').strip()
@@ -81,6 +89,10 @@ def compare():
         print('Checksum passed')
     else:
         print(f'Checksum failed. Sum of string is {make_sum(s)}')
+
+'''
+CORE
+'''
 
 def run():
     make_sequence()
