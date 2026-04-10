@@ -73,9 +73,18 @@ def test():
     print(test1, make_sum(test1))
     print(test2, make_sum(test2))
 
+def compare():
+    check = int(input('Enter a checksum: ').strip())
+    s = input('Enter a string: ').strip()
+
+    if check_sum(s, check):
+        print('Checksum passed')
+    else:
+        print(f'Checksum failed. Sum of string is {make_sum(s)}')
+
 def run():
     make_sequence()
-    test()
+    compare()
 
 if __name__ == '__main__':
     run()
